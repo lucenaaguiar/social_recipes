@@ -1,0 +1,12 @@
+<%= simple_form_for @recipe do |f| %>
+  <%= f.input :name, label: 'Nome' %>
+  <%= f.input :kitchen_type, label: 'Cozinha' %>
+  <%= f.input :food_type, label: 'Tipo de Comida' %>
+  <%= f.input :amount_people, label: 'Pessoas' %>
+  <%= f.input :preparation_time, label: 'Tempo de Preparo' %>
+  <%= f.input :preparation_level, label: 'Nível de Dificuldade' %>
+  <%= f.input :ingredients, label: 'Ingredientes' %>
+  <%= f.input :steps, label: 'Passo a passo' %>
+  <%= f.submit 'Cadastrar Receita' %>
+<% end %>
+<span><%= notice %></span>
