@@ -8,11 +8,11 @@ feature 'Visitor visit home' do
   end
 
   scenario 'and view all recipes' do
-    recipe  = create(:recipe)
-    recipe1 = create(:recipe, name: 'Bolo de Laranja')
-    recipe2 = create(:recipe, name: 'Bolo de Fubá')
+    recipe1 = create(:recipe)
+    recipe2 = create(:recipe, name: 'Bolo de Laranja')
+    recipe3 = create(:recipe, name: 'Bolo de Fubá')
 
-    recipes = [recipe, recipe1, recipe2]
+    recipes = [recipe1, recipe2, recipe3]
 
     visit root_path
 
