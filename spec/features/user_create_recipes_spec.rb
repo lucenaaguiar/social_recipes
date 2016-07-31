@@ -13,7 +13,9 @@ feature 'User create recipes' do
     fill_in 'Ingredientes', with: 'Ingredientes'
     fill_in 'Passo a passo', with: 'Passo a passo'
 
-    click_on 'Cadastrar Receita'
+    within '//form' do
+      click_on 'Cadastrar Receita'
+    end
 
     expect(page).to have_content 'Bolo de cenoura'
     expect(page).to have_content 'Cozinha'
@@ -37,7 +39,9 @@ feature 'User create recipes' do
     fill_in 'Ingredientes', with: ''
     fill_in 'Passo a passo', with: ''
 
-    click_on 'Cadastrar Receita'
+    within '//form' do
+      click_on 'Cadastrar Receita'
+    end
 
     expect(page).to have_content 'Não foi possível cadastrar a receita.'
   end

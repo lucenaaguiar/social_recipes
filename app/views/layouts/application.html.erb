@@ -9,7 +9,11 @@
   </head>
 
   <body>
-    <h1>SocialRecipes</h1>
-    <%= yield %>
+    <header>
+      <%= render 'layouts/nav' %>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </header>
   </body>
 </html>

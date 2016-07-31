@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <!-- ****** MENU LOGO  COL-MD-4 ****** -->
+      <div class="col-md-4 col-sm-5">
+        <%= link_to root_path do %>
+          <div class="logo">
+            <%= image_tag 'socialrecipe.png', class: 'img-responsive' %>
+            <h1>SocialRecipes</h1>
+          </div>
+        <% end %>
+      </div>
+      <!-- ****** MENU BOTOES  COL-MD-8 ****** -->
+      <div class="col-md-8 col-sm-7">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-right" role="navigation">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li>
+                  <%= link_to root_path do %>
+                  <%= image_tag 'nav-menu/nav1.jpg', class: 'img-responsive' %>
+                  Início
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to root_path do %>
+                  <%= image_tag 'nav-menu/nav2.jpg', class: 'img-responsive' %>
+                  Minhas Receitas
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to new_recipe_path do %>
+                  <%= image_tag 'nav-menu/nav3.jpg', class: 'img-responsive' %>
+                  Cadastrar Receita
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to root_path do %>
+                  <%= image_tag 'nav-menu/nav4.jpg', class: 'img-responsive' %>
+                  Login
+                  <% end %>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div><!-- FIM COL-MD-8-->
+
+    </div> <!-- FIM ROW -->
+  </div> <!-- / .container -->
+</div>
