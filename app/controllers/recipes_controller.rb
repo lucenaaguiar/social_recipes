@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  before_action :all_kitchen_types, only: [:new, :create]
+
   def show
     @recipe = Recipe.find(params[:id])
   end
@@ -20,8 +22,12 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :kitchen_type, :food_type,
+    params.require(:recipe).permit(:name, :kitchen_type_id, :food_type,
                                    :amount_people, :preparation_time,
                                    :preparation_level, :ingredients, :steps)
+  end
+
+  def all_kitchen_types
+    @kitchen_types = KitchenType.all
   end
 end

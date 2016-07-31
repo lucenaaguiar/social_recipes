@@ -1,0 +1,15 @@
+<section>
+  <div class="row">
+    <h1>Nova Cozinha</h1>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= simple_form_for @kitchen_type do |f| %>
+          <%= f.input :name, label: 'Nome' %>
+          <%= f.submit 'Cadastrar Cozinha' %>
+        <% end %>
+      </div>
+
+      <span><%= notice %></span>
+    </div>
+  </div>
+</section>

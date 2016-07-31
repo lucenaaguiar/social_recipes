@@ -8,6 +8,8 @@ feature 'Visitor visit home' do
   end
 
   scenario 'and view all recipes' do
+    create(:kitchen_type, name: 'Italiana')
+
     recipe1 = create(:recipe)
     recipe2 = create(:recipe, name: 'Bolo de Laranja')
     recipe3 = create(:recipe, name: 'Bolo de Fubá')
@@ -18,7 +20,7 @@ feature 'Visitor visit home' do
 
     recipes.each do |recipe|
       expect(page).to have_content(recipe.name)
-      expect(page).to have_content(recipe.kitchen_type)
+      expect(page).to have_content(recipe.kitchen_type.name)
       expect(page).to have_content(recipe.food_type)
       expect(page).to have_content(recipe.preparation_time)
       expect(page).to have_content(recipe.preparation_level)
