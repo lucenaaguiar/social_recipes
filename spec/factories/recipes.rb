@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :recipe do
     name "Bolo de Cenoura"
     kitchen_type_id '1'
-    food_type "Doce"
+    food_type_id '1'
     amount_people 8
     preparation_time "60 minutos"
     preparation_level "Fácil"

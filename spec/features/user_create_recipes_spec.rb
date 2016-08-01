@@ -3,12 +3,13 @@ require 'rails_helper'
 feature 'User create recipes' do
   scenario 'Successfully' do
     create(:kitchen_type, name: 'Italiana')
+    create(:food_type, name: 'Sobremesa')
 
     visit new_recipe_path
 
     fill_in 'Nome', with: 'Bolo de cenoura'
     select 'Italiana', from: 'Cozinha'
-    fill_in 'Tipo de Comida', with: 'Doce'
+    select 'Sobremesa', from: 'Tipo de Comida'
     fill_in 'Pessoas', with: 8
     fill_in 'Tempo de Preparo', with: '1 hora'
     fill_in 'Nível de Dificuldade', with: 'Fácil'
@@ -20,8 +21,8 @@ feature 'User create recipes' do
     end
 
     expect(page).to have_content 'Bolo de cenoura'
-    expect(page).to have_content 'Cozinha'
-    expect(page).to have_content 'Doce'
+    expect(page).to have_content 'Italiana'
+    expect(page).to have_content 'Sobremesa'
     expect(page).to have_content '8'
     expect(page).to have_content '1 hora'
     expect(page).to have_content 'Fácil'
@@ -34,7 +35,7 @@ feature 'User create recipes' do
 
     fill_in 'Nome', with: ''
     select '', from: 'Cozinha'
-    fill_in 'Tipo de Comida', with: ''
+    select '', from: 'Tipo de Comida'
     fill_in 'Pessoas', with: ''
     fill_in 'Tempo de Preparo', with: ''
     fill_in 'Nível de Dificuldade', with: ''

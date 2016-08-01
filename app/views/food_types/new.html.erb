@@ -1,0 +1,15 @@
+<section>
+  <div class="row">
+    <h1>Novo Tipo de Comida</h1>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= simple_form_for @food_type do |f| %>
+          <%= f.input :name, label: 'Nome' %>
+          <%= f.submit 'Cadastrar Tipo' %>
+        <% end %>
+      </div>
+
+      <span><%= notice %></span>
+    </div>
+  </div>
+</section>

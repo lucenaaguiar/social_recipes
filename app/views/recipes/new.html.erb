@@ -6,7 +6,7 @@
             <div class="col-md-6">
               <%= f.input :name, label: 'Nome' %>
               <%= f.input :kitchen_type_id, collection: @kitchen_types, prompt: 'Selecione', label_method: :name, value_method: :id, label: 'Cozinha' %>
-              <%= f.input :food_type, label: 'Tipo de Comida' %>
+              <%= f.input :food_type_id, collection: @food_types, prompt: 'Selecione', label_method: :name, value_method: :id, label: 'Tipo de Comida' %>
               <%= f.input :amount_people, label: 'Pessoas' %>
               <%= f.input :preparation_time, label: 'Tempo de Preparo' %>
               <%= f.input :preparation_level, label: 'Nível de Dificuldade' %>
