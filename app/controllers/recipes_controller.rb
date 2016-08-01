@@ -11,6 +11,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.photo = params[:recipe][:photo]
     if @recipe.save
       redirect_to @recipe
     else

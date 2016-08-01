@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: lucenaaguiar
+  api_key: '787974213784214'
+  api_secret: VbfGeCD2nZGpd8igryoOrDYHb_M
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: lucenaaguiar
+  api_key: '787974213784214'
+  api_secret: VbfGeCD2nZGpd8igryoOrDYHb_M
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: lucenaaguiar
+  api_key: '787974213784214'
+  api_secret: VbfGeCD2nZGpd8igryoOrDYHb_M
+  enhance_image_tag: true
+  static_image_support: false

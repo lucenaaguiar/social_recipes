@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160731182849) do
+ActiveRecord::Schema.define(version: 20160801023943) do
 
   create_table "kitchen_types", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160731182849) do
     t.datetime "updated_at",        null: false
     t.integer  "amount_people"
     t.integer  "kitchen_type_id"
+    t.string   "photo"
     t.index ["kitchen_type_id"], name: "index_recipes_on_kitchen_type_id"
   end
 
